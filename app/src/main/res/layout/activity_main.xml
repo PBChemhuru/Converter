@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-4dp">
+
+        <TextView
+            android:id="@+id/lblHead1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Miles/Kilometers"
+            android:textSize="24dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/lblDist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblHead1"
+            android:layout_alignBaseline="@id/txtDist"
+            android:text="Distance">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/txtDist"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblHead1"
+            android:layout_toEndOf="@id/lblDist"
+            android:inputType="numberDecimal">
+
+        </EditText>
+
+        <RadioGroup
+            android:id="@+id/group1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDist"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/cmdMl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Km to MILES"
+                android:textSize="20dp"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/cmdKm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Miles to Km"
+                android:textSize="20dp"></RadioButton>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/Clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/group1"
+            android:layout_marginTop="10dp"
+            android:onClick="distClear"
+            android:text="Clear"></Button>
+
+        <Button
+            android:id="@+id/Convert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/group1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/Clear"
+            android:onClick="Convert"
+            android:text="Convert"></Button>
+
+        <TextView
+            android:id="@+id/lblHead2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Convert"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="Fahrenheit/Celsius"
+            android:textSize="24dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/lblTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblHead2"
+            android:layout_marginStart="-197dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@id/lblHead2"
+            android:text="Temperature"
+            android:layout_alignBaseline="@id/txtTemp">
+
+        </TextView>
+        <EditText
+            android:id="@+id/txtTemp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:layout_below="@id/lblHead2"
+            android:layout_toEndOf="@id/lblTemp" >
+
+        </EditText>
+        <RadioGroup
+            android:id="@+id/group2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTemp"
+            android:layout_marginTop="10dp">
+            <RadioButton
+                android:id="@+id/cmdFaren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fahrenheit to Celsius"
+                android:textSize="20dp"
+                android:checked="true"
+                >
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/cmdCelci"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Celsius to Fahrenheit"
+                android:textSize="20dp"
+                >
+            </RadioButton>
+        </RadioGroup>
+        <Button
+            android:id="@+id/Clear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/group2"
+            android:layout_marginTop="10dp"
+            android:onClick="TempClear"
+            android:text="Clear"></Button>
+
+        <Button
+            android:id="@+id/Convert2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/group2"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/Clear2"
+            android:onClick="Convert2"
+            android:text="Convert"></Button>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
